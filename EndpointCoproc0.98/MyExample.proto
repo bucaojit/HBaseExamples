@@ -1,0 +1,21 @@
+// Compile using:
+// mvn compile -Dcompile-protobuf
+
+option java_package = "org.apache.hadoop.hbase.coprocessor.example.generated";
+option java_outer_classname = "MyExampleProtos";
+option java_generic_services = true;
+//option java_generate_equals_and_hash = true;
+option optimize_for = SPEED;
+
+message HelloWorldRequest {
+  optional string message=1;
+}
+
+message HelloWorldResponse {
+  optional int64 message=1;
+}
+
+service HelloWorldService {
+  rpc sendHelloWorldRequest(HelloWorldRequest)
+    returns (HelloWorldResponse);
+}
