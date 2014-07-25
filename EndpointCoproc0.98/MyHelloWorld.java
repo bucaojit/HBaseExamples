@@ -9,9 +9,7 @@ import org.apache.hadoop.hbase.CoprocessorEnvironment;
 import org.apache.hadoop.hbase.coprocessor.CoprocessorException;
 import org.apache.hadoop.hbase.coprocessor.CoprocessorService;
 import org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment;
-//import org.apache.hadoop.hbase.coprocessor.example.generated.MyExampleProtos.HelloWorldReponse.Builder;
 import org.apache.hadoop.hbase.coprocessor.example.generated.MyExampleProtos.HelloWorldResponse.Builder;
-//import org.apache.hadoop.hbase.coprocessor.example.generated.BulkDeleteProtos.BulkDeleteResponse.Builder;
 import org.apache.hadoop.hbase.coprocessor.example.generated.MyExampleProtos.HelloWorldRequest;
 import org.apache.hadoop.hbase.coprocessor.example.generated.MyExampleProtos.HelloWorldResponse;
 import org.apache.hadoop.hbase.coprocessor.example.generated.MyExampleProtos.HelloWorldService;
@@ -39,9 +37,6 @@ public class MyHelloWorld extends HelloWorldService implements CoprocessorServic
                                               RpcCallback<HelloWorldResponse> done) {
     LOG.info("This is the Hello World coprocessor, message is: " + request.getMessage());
     
-    //MyExampleProtos.HelloWorldResponse hwr = ;
-    
-    //done.run(1013);
     Builder responseBuilder = HelloWorldResponse.newBuilder();
     responseBuilder.setMessage(1013);
     HelloWorldResponse hwResponse = responseBuilder.build();
