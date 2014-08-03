@@ -1,4 +1,4 @@
-hbase_examples
+HBaseExamples
 ==============
 
 Some hbase code examples I've written while working on HBase, for use as a starting point for more involved work.
