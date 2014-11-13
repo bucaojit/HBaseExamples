@@ -4,7 +4,7 @@ HBaseExamples
 Some HBase code examples I've written while working on HBase, for use as a starting point for more involved work.
 
 To compile the examples, the JAR's located in the hbase/lib directory need to be added to the CLASSPATH before
-compilation.  
+compilation.
 
 Included a few useful coprocessor examples, one is for an Observer coprocessor, and the more complex
 Endpoint coprocessor example.
