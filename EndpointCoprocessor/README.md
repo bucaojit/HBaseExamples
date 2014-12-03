@@ -1,14 +1,17 @@
 # BUILDING:
 
 To compile the protobuf, you will need the proto compiler version 2.5.  You can get this by downloading it using:
-
+'''
 curl https://protobuf.googlecode.com/files/protobuf-2.5.0.tar.gz > protobuf.tar.gz
 Then compiling it and adding the protoc binary to the beginning of your PATH env variable.
+'''
 
 A simple way to compile the protobuf is to add it to the HBase src directory, namely:
+
 hbase/hbase-protocol/src/main/protobuf
+
 And then issuing the command to compile using Maven:
-mvn compile -Dcompile-protobuf
+>mvn compile -Dcompile-protobuf
 
 The generated Java file will be located in:
 
