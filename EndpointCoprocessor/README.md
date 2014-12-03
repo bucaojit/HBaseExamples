@@ -6,14 +6,13 @@ curl https://protobuf.googlecode.com/files/protobuf-2.5.0.tar.gz > protobuf.tar.
 Then compiling it and adding the protoc binary to the beginning of your PATH env variable.
 ```
 
-A simple way to compile the protobuf is to add it to the HBase src directory, namely:
+A simple way to compile the protobuf is to add it to the HBase src directory, namely:  
 `hbase/hbase-protocol/src/main/protobuf`
 
-And then issuing the command to compile using Maven:
+And then issuing the command to compile using Maven:  
 >mvn compile -Dcompile-protobuf
 
-The generated Java file will be located in:
-
+The generated Java file will be located in:  
 `hbase/hbase-protocol/src/main/java/org/apache/hadoop/hbase/protobuf/generated`
 
 Another way to build it would be to call the 'protoc' directly and supplying the correct arguments to it.
