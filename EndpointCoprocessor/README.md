@@ -7,7 +7,6 @@ Then compiling it and adding the protoc binary to the beginning of your PATH env
 ```
 
 A simple way to compile the protobuf is to add it to the HBase src directory, namely:
-
 `hbase/hbase-protocol/src/main/protobuf`
 
 And then issuing the command to compile using Maven:
@@ -15,7 +14,7 @@ And then issuing the command to compile using Maven:
 
 The generated Java file will be located in:
 
-hbase/hbase-protocol/src/main/java/org/apache/hadoop/hbase/protobuf/generated
+`hbase/hbase-protocol/src/main/java/org/apache/hadoop/hbase/protobuf/generated`
 
 Another way to build it would be to call the 'protoc' directly and supplying the correct arguments to it.
 The --proto_path will have to be specified to point to the hbase-protocol directory and a --java_out path
