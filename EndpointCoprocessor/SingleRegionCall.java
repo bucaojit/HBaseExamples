@@ -40,18 +40,21 @@ import org.apache.hadoop.hbase.util.Bytes;
 import com.google.protobuf.ByteString;
 
 /*
- *   The HTable javadocs has an incorrect example implementation:
+ *   The HTable 0.98 javadocs has an incorrect example implementation:
  *   http://archive.cloudera.com/cdh5/cdh/5/hbase/apidocs/org/apache/hadoop/hbase/client/HTable.html#coprocessorService(byte[])
- *  
- *   The below example shows a correct way of making a single region coprocessor 
- *   call 
- *  
+ *   ---------------
  *   CoprocessorRpcChannel channel = myTable.coprocessorService(rowkey);
  *   MyService.BlockingInterface service = MyService.newBlockingStub(channel);
  *   MyCallRequest request = MyCallRequest.newBuilder()
  *     ...
  *   .build();
  *   MyCallResponse response = service.myCall(null, request);
+ *   ---------------
+ *   
+ *   In the above example, MyCallRequest.newBuilder() returns a builder, not a request.
+ *   
+ *   The below example shows a correct way of making a single region coprocessor call 
+ *  
  */
 
 public class SingleRegionCall extends BaseMasterObserver {
